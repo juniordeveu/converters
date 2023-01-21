@@ -1,0 +1,66 @@
+*{
+    
+    box-sizing: border-box;
+    font-size: 20px;
+
+}
+body{
+    background: linear-gradient(172deg, rgb(122, 153, 189) 22%, rgb(150, 168, 207) 35%, rgb(185, 181, 214) 49%, rgb(192, 176, 206) 54%, rgb(233, 189, 196) 78%, rgb(240, 199, 224) 95%) !important;
+}
+
+/* 
+First box 1 
+*/
+.percent__box{
+    background-color: rgb(205, 231, 158);
+    border-radius:      .5em;
+    font-family:        'Fredoka One', cursive;
+    line-height:        1;
+    padding:            1em;
+ 
+}
+.btn__test{
+    border-color: rgb(124, 121, 70) !important;
+    background-color: rgb(248, 224, 145) !important;
+    height: 50px;
+}
+.btn__test:hover{
+    background-color: rgb(160, 145, 94) !important;
+}
+.percent__box--p1{
+    color:          rgb(87, 194, 236) !important;
+    margin:           0 0 0 .5em;
+    font-size:          2vmax;
+}
+.percent__box--p2{
+
+    font-size: 4vmax;
+}
+
+.col__result{
+    overflow-y: hidden;
+}
+.span--result, .span--result2, .span--result3{
+color:          rgb(236, 136, 97);
+margin:           0 0 0 .2em;
+font-size:        5vmax;
+}
+.span--result2-devideZero{
+    color:          rgb(243, 54, 54);
+    margin:           0 0 0 .1em;
+    font-size:        1.5vmax;  
+}
+
+.percent__box--btn1:hover{
+    -webkit-box-shadow:         6px 7px 25px 0px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow:            6px 7px 25px 0px rgba(0, 0, 0, 0.13);
+    box-shadow:                 6px 7px 25px 0px rgba(0, 0, 0, 0.13);
+    background-color:  rgb(143, 131, 76) !important;
+    color: beige !important;
+}
+
+
+
+/* 
+end
+*/
