@@ -13,10 +13,11 @@ First box 1
 */
 .percent__box{
     background-color: rgb(205, 231, 158);
-    border-radius:      .5em;
+    border-radius:      .4em;
     font-family:        'Fredoka One', cursive;
     line-height:        1;
-    padding:            1em;
+    padding:            .6em;
+
  
 }
 .btn__test{
@@ -32,15 +33,28 @@ First box 1
     margin:           0 0 0 .5em;
     font-size:          2vmax;
 }
+.percent__box--p1v2{
+    color:          rgb(236, 87, 179) !important;
+    margin:           0 0 0 .5em;
+    font-size:          2vmax;
+}
+
 .percent__box--p2{
 
-    font-size: 4vmax;
+    font-size: 3vmax;
+    word-wrap: break-word;
+  
+   
 }
 
 .col__result{
     overflow-y: hidden;
 }
-.span--result, .span--result2, .span--result3{
+.span--result, 
+.span--result2, 
+.span--result3,
+.span--result4,
+.span--result5{
 color:          rgb(236, 136, 97);
 margin:           0 0 0 .2em;
 font-size:        5vmax;
@@ -64,3 +78,4 @@ font-size:        5vmax;
 /* 
 end
 */
+

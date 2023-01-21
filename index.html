@@ -15,162 +15,298 @@
     <!-- end f -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Kalkulatory</title>
+    
 </head>
 <body>
- <nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 ">
-             
-            </div>
-        </div>
-    </div>
- </nav>
- <header>
-    <div class="container-fluid">
+<header>
+    <div class="container-fluid mb-5">
         <div class="row">
             <div class="col-12">
-                <p class="lead">Procenty</p>
+                <div class="display-5">
+                    Procenty
+                </div>
             </div>
         </div>
     </div>
- </header>
+</header>
+
  <article>
     <div class="container-fluid ">
-        <div class="row h-100 min-vh-100 d-flex align-items-center">
-            <div class="col-md-4">
-                <div class="percent__box">
-                    
-                        <div class="row m-1 ">
-                            <div class="col-12 " >
-                            <p class="percent__box--p1">obliczamy </p>
-                            <p class="percent__box--p2">Procent z danej liczby</p>
-                            </div>
-                            <div class="col-md-2 m-2 d-flex justify-content-center">
-                                <button class="btn btn-info btn-sm btn__test" data-bs-toggle="modal" data-bs-target="#percentModal--1">Oblicz</button>
-                                <div class="modal fade" id="percentModal--1">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <!-- HEADER -->
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Procent z danej liczby</h4>
-                                                <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"></button>
-                                            </div>
-                                            <!-- Body -->
-                                            <div class="modal-body ">
-                                                <form action="#">
-                                                <label for="num1" class="form-label m-2">Oblicz </label>
-                                                <input type="number" class="form-control w-25" name="numberOne" id="num1">
-                                                <label for="num2" class="form-label m-2"> % z liczby</label>
-                                                <input type="number" class="form-control w-25" name="numberTwo" id="num2">
-                                            </form>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" onclick="percentOfNumber()">Oblicz</button>
+       <div class="row">
+        <div class="col">
+            <div class="row">
+               
+                <div class="col-md-12 "> <!-- for box -->
+                    <div class="row  d-flex justify-content-around">
+                        <div class="col-md-3 mb-2 p-2"><!-- col First box -->
+                            <div class="percent__box"><!-- first box -->
+                                <div class="row p-2">
+                                    <div class="col-12  " >
+                                        <p class="percent__box--p1">obliczamy </p>
+                                        <p class="percent__box--p2">Procent z danej liczby</p>
+                                    </div>
+                                    <div class="row p-3 m-1">
+                                        <div class="col-md-2 m-2 d-flex justify-content-center">
+                                            <button class="btn btn-info btn-sm btn__test" data-bs-toggle="modal" data-bs-target="#percentModal--1">Oblicz</button>
+                                        </div>
+                                        <div class="col-md-9 p-0 d-flex align-items-center mx-1 col__result">Wynik <span id="new"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                     <!-- modal -->
+                                     <div class="modal fade" id="percentModal--1">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Procent z danej liczby</h4>
+                                                    <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="#">
+                                                        <label for="num1" class="form-label m-2">Oblicz </label>
+                                                        <input type="number" class="form-control w-25" name="numberOne" id="num1">
+                                                        <label for="num2" class="form-label m-2"> % z liczby</label>
+                                                        <input type="number" class="form-control w-25" name="numberTwo" id="num2">>
+                                                    </form>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" onclick="percentOfNumber()">Oblicz</button>
+                                                </div>
+                                                </div>
                                             </div>
                                         </div>
                                         
-
+                                    </div>
+                                    <!-- End modal -->
+                            </div><!-- end first box -->
+                        </div><!--col End First Box -->
+                        <div class="col-md-3 mb-2">
+                            <div class="percent__box "><!-- second box -->
+                                <div class="row p-2">
+                                    <div class="col-12" >
+                                        <p class="percent__box--p1">obliczamy </p>
+                                        <p class="percent__box--p2">Jakim procentem jednej liczby jest druga liczba</p>
+                                    </div>
+                                    <div class="row p-3 m-1">
+                                        <div class="col-md-2 m-2 d-flex justify-content-center">
+                                            <button class="btn btn-info btn-sm btn__test" data-bs-toggle="modal" data-bs-target="#percentModal--2">Oblicz</button>
+                                        </div>
+                                        <div class="col-md-9 p-0 d-flex align-items-center mx-1 col__result">Wynik <span id="new--2"></span>
+                                        </div>
                                     </div>
                                 </div>
-            
-                            </div>
-                            <div class="col-md-9  d-flex align-items-center mx-1 col__result">Wynik <span id="new"></span></div>
-                         </div>
-                       
-                </div>
-            </div>
-                 
-            <div class="col-md-4">
-                <div class="percent__box">
-                    
-                    <div class="row m-1 ">
-                        <div class="col-12 " >
-                        <p class="percent__box--p1">obliczamy </p>
-                        <p class="percent__box--p2">Jakim procentem jednej liczby jest druga liczba</p>
+                                     <!-- modal -->
+                                     <div class="modal fade" id="percentModal--2">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Jakim procentem jednej liczby jest druga liczba</h4>
+                                                    <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="#">
+                                                        <label for="firstNum" class="form-label m-2">Jakim % liczby </label>
+                                                        <input type="number" class="form-control w-25" name="firstNum" id="firstNum">
+                                                        <label for="secondNum" class="form-label m-2"> jest liczba </label>
+                                                        <input type="number" class="form-control w-25" name="secondNum" id="secondNum">
+                                                    </form>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" onclick="PercentOfOneNumbIsOtherNumb()">Oblicz</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- End modal -->
+                            </div><!-- end second box -->
                         </div>
-                        <div class="col-md-2 m-2 d-flex justify-content-center">
-                            <button class="btn btn-info btn-sm btn__test" data-bs-toggle="modal" data-bs-target="#percentModal--2">Oblicz</button>
-                            <div class="modal fade" id="percentModal--2">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <!-- HEADER -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Jakim procentem jednej liczby jest druga liczba</h4>
-                                            <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"></button>
+                        <div class="col-md-3 mb-2">
+                            <div class="percent__box"><!-- three box -->
+                                <div class="row p-2">
+                                    <div class="col-12  " >
+                                        <p class="percent__box--p1">Obliczanie </p>
+                                        <p class="percent__box--p2">liczby majac dany jej procent</p>
+                                    </div>
+                                    <div class="row p-3 m-1">
+                                        <div class="col-md-2 m-2 d-flex justify-content-center">
+                                            <button class="btn btn-info btn-sm btn__test" data-bs-toggle="modal" data-bs-target="#percentModal--3">Oblicz</button>
                                         </div>
-                                        <!-- Body -->
-                                        <div class="modal-body ">
-                                            <form action="#">
-                                            <label for="firstNum" class="form-label m-2">Jakim % liczby </label>
-                                            <input type="number" class="form-control w-25" name="firstNum" id="firstNum">
-                                            <label for="secondNum" class="form-label m-2"> jest liczba </label>
-                                            <input type="number" class="form-control w-25" name="secondNum" id="secondNum">
-                                        </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" onclick="PercentOfOneNumbIsOtherNumb()">Oblicz</button>
+                                        <div class="col-md-9 p-0 d-flex align-items-center mx-1 col__result">Wynik <span id="new--3"></span>
                                         </div>
                                     </div>
-                                    
-
                                 </div>
-                            </div>
-        
-                        </div>
-                        <div class="col-md-9  d-flex align-items-center mx-1 col__result">Wynik <span id="new--2"></span></div>
-                     </div>
-                   
-            </div>
-            </div>
-            <div class="col-md-4">
-                <div class="percent__box">
-                    
-                    <div class="row m-1 ">
-                        <div class="col-12 " >
-                        <p class="percent__box--p1">Obliczanie </p>
-                        <p class="percent__box--p2">liczby majac dany jej procent</p>
-                        </div>
-                        <div class="col-md-2 m-2 d-flex justify-content-center">
-                            <button class="btn btn-info btn-sm btn__test" data-bs-toggle="modal" data-bs-target="#percentModal--3">Oblicz</button>
-                            <div class="modal fade" id="percentModal--3">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <!-- HEADER -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Obliczanie liczby majac dany jej procent</h4>
-                                            <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"></button>
+                                     <!-- modal -->
+                                     <div class="modal fade" id="percentModal--3">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Obliczanie liczby majac dany jej procent</h4>
+                                                    <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="#">
+                                                        <label for="num1" class="form-label m-2">Oblicz liczbe, której </label>
+                                                        <input type="number" class="form-control w-25" name="firstNum_3" id="num1">
+                                                        <label for="num2" class="form-label m-2"> %. Jest równe</label>
+                                                        <input type="number" class="form-control w-25" name="secondNum_3" id="num2">
+                                                    </form>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" onclick="NumWithPercent()">Oblicz</button>
+                                                </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <!-- Body -->
-                                        <div class="modal-body ">
-                                            <form action="#">
-                                            <label for="num1" class="form-label m-2">Oblicz liczbe, której </label>
-                                            <input type="number" class="form-control w-25" name="firstNum_3" id="num1">
-                                            <label for="num2" class="form-label m-2"> %. Jest równe</label>
-                                            <input type="number" class="form-control w-25" name="secondNum_3" id="num2">
-                                        </form>
+                                        
+                                    </div>
+                                    <!-- End modal -->
+                            </div><!-- end three box -->
+                        </div>
+                        
+                    </div>
+                  
+                    <div class="row mt-4 d-flex justify-content-around">
+                        <div class="col-md-3 mb-2">
+                            <div class="percent__box"><!-- first box -->
+                                <div class="row p-2">
+                                    <div class="col-12  " >
+                                        <p class="percent__box--p1v2">Procent skladany </p>
+                                        <p class="percent__box--p2">Kapitalizacja raz w roku</p>
+                                    </div>
+                                    <div class="row p-3 m-1">
+                                        <div class="col-md-2 m-2 d-flex justify-content-center">
+                                            <button class="btn btn-info btn-sm btn__test" data-bs-toggle="modal" data-bs-target="#percentModal--4">Oblicz</button>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" onclick="NumWithPercent()">Oblicz</button>
+                                        <div class="col-md-9 p-0 d-flex align-items-center mx-1 col__result">Zysk <span id="new--4"></span>
                                         </div>
                                     </div>
-                                    
-
                                 </div>
-                            </div>
-        
+                                     <!-- modal -->
+                                     <div class="modal fade" id="percentModal--4">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Kapitalizacja raz w roku</h4>
+                                                    <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="#">
+                                                        <label for="initCapital" class="form-label m-2">Kapital poczatkowy </label>
+                                                        <input type="number" class="form-control w-25" name="initCapital_1" id="initCapital">
+                                                        <label for="yearsDeposit" class="form-label m-2"> Liczba lat depozytu</label>
+                                                        <input type="number" class="form-control w-25" name="yearsDeposit_1" id="yearsDeposit">
+                                                        <label for="interestRate" class="form-label m-2">Roczna stopa procentowa</label>
+                                                        <input type="number" class="form-control w-25" name="interestRate_1" id="interestRate">
+                                                    </form>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" onclick=" percentInterest_1()">Wylicz</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- End modal -->
+                            </div><!-- end first box -->
                         </div>
-                        <div class="col-md-9  d-flex align-items-center mx-1 col__result">Wynik <span id="new--3"></span></div>
-                     </div>
-                   
+                        <div class="col-md-3 mb-2">
+                            <div class="percent__box"><!-- second box -->
+                                <div class="row p-2">
+                                    <div class="col-12  " >
+                                        <p class="percent__box--p1v2">Procent skladany </p>
+                                        <p class="percent__box--p2">Kapitalizacja co 1/2 roku</p>
+                                    </div>
+                                    <div class="row p-3 m-1">
+                                        <div class="col-md-2 m-2 d-flex justify-content-center">
+                                            <button class="btn btn-info btn-sm btn__test" data-bs-toggle="modal" data-bs-target="#percentModal--5">Oblicz</button>
+                                        </div>
+                                        <div class="col-md-9 p-0 d-flex align-items-center mx-1 col__result">Zysk <span id="new--5"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                     <!-- modal -->
+                                     <div class="modal fade" id="percentModal--5">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Kapitalizacja co 1/2 roku</h4>
+                                                    <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="#">
+                                                        <label for="initCapital_2" class="form-label m-2">Kapital poczatkowy </label>
+                                                        <input type="number" class="form-control w-25" name="initCapital_2" id="initCapital_2">
+                                                        <label for="yearsDeposit" class="form-label m-2"> Liczba lat depozytu</label>
+                                                        <input type="number" class="form-control w-25" name="yearsDeposit_2" id="yearsDeposit">
+                                                        <label for="interestRate_2" class="form-label m-2">Roczna stopa procentowa</label>
+                                                        <input type="number" class="form-control w-25" name="interestRate_2" id="interestRate_2">
+                                                    </form>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" onclick=" percentInterest_2()">Wyllicz</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- End modal -->
+                            </div><!-- end second box -->
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <div class="percent__box"><!-- three box -->
+                                <div class="row p-2">
+                                    <div class="col-12  " >
+                                        <p class="percent__box--p1v2">Procent skladany </p>
+                                        <p class="percent__box--p2">Kapitalizacja co miesiac</p>
+                                    </div>
+                                    <div class="row p-3 m-1">
+                                        <div class="col-md-2 m-2 d-flex justify-content-center">
+                                            <button class="btn btn-info btn-sm btn__test" data-bs-toggle="modal" data-bs-target="#percentModal--6">Oblicz</button>
+                                        </div>
+                                        <div class="col-md-9 p-0 d-flex align-items-center mx-1 col__result">Zysk <span id="new--6"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                     <!-- modal -->
+                                     <div class="modal fade" id="percentModal--6">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                  <!-- HEADER -->
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Kapitalizacja co miesiac </h4>
+                                                    <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="#">
+                                                        <label for="initCapital_3" class="form-label m-2">Kapital poczatkowy </label>
+                                                        <input type="number" class="form-control w-25" name="initCapital_3" id="initCapital_3">
+                                                        <label for="yearsDeposit_3" class="form-label m-2"> Liczba lat depozytu</label>
+                                                        <input type="number" class="form-control w-25" name="yearsDeposit_3" id="yearsDeposit_3">
+                                                        <label for="interestRate_3" class="form-label m-2">Roczna stopa procentowa</label>
+                                                        <input type="number" class="form-control w-25" name="interestRate_3" id="interestRate_3">
+                                                    </form>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" onclick=" percentInterest_3()">Wyllicz</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- End modal -->
+                            </div><!-- end three box -->
+                        </div>
+                        
+                    </div>
+                    <div class="row mt-4 d-flex justify-content-around"></div>
+                </div><!-- end for box -->
+
             </div>
-            </div>
-            
         </div>
-    </div>
+       </div>
  </article>   
  
  <script src="./index.js"></script>   
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
+
